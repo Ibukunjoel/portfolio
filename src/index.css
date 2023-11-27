@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,54 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+:root {
+  --bg: #242526;
+  --bg-accent: #484a4d;
+  --text-color: #dadce1;
+  --speed: 500ms;
+}
+
+.menu{
+  animation: open-menu 300ms ease-in both alternate;
+  overflow: hidden;
+}
+
+@keyframes open-menu {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.image_frame{
+  height: 400px;
+  width: 400px;
+}
+
+.ibukun{
+  height: 100%;
+  width: 100%;
+}
+
+.wave{
+  animation: waving 2s ease-in-out 300ms infinite alternate;
+  z-index: -10;
+}
+
+@keyframes waving {
+  0%{
+    transform: rotate(-15deg);
+  }  
+
+  100%{
+    transform: rotate(30deg);
+  }
 }
