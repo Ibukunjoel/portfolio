@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 :root {
   --bg: #242526;
@@ -24,44 +27,111 @@ code {
   --speed: 500ms;
 }
 
-.menu{
+.menu {
   animation: open-menu 300ms ease-in both alternate;
   overflow: hidden;
 }
 
 @keyframes open-menu {
-  0%{
+  0% {
     transform: translateX(-100%);
     opacity: 0;
   }
 
-  100%{
+  100% {
     transform: translateX(0%);
     opacity: 1;
   }
 }
 
-.image_frame{
-  height: 400px;
-  width: 400px;
+.image_frame {
+  /* height: 400px;
+  width: 400px; */
+  animation: morph 8s ease-in-out infinite;
+  background-image: url("../src/assets/images/ibukun.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 25rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 25rem;
 }
 
-.ibukun{
-  height: 100%;
-  width: 100%;
+.ibukun {
+  /* height: 100%;
+  width: 100%; */
+  /* background-image: url(/static/media/pfp_webp.f334283….webp); */
 }
 
-.wave{
+.wave {
   animation: waving 2s ease-in-out 300ms infinite alternate;
   z-index: -10;
 }
 
-@keyframes waving {
-  0%{
-    transform: rotate(-15deg);
-  }  
+.pro_img{
+  background-color: #dadce1;
+  border-radius: .5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  height: 390px;
+  overflow: hidden;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
+}
 
-  100%{
+.roll-up {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  transform: translateY(0%);
+  transition: transform 10s ease-in-out 0s;
+  height: inherit;
+  overflow: hidden;
+}
+
+.roll-up:hover{
+ transform: translateY(-23%);
+ transition: transform 10s ease-in-out 0s;
+}
+
+@media only screen and (max-width: 991px) {
+  .image_frame {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@keyframes waving {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
     transform: rotate(30deg);
+  }
+}
+
+@keyframes rolling_up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-83);
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }

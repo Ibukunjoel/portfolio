@@ -1,5 +1,5 @@
 import React from "react";
-import ibukun from "../assets/images/ibukun.jpg";
+// import ibukun from "../assets/images/ibukun.jpg";
 import github from "../assets/icons/github.png";
 import linkedln from "../assets/icons/linkedin.png";
 import html from "../assets/icons/html.png";
@@ -12,25 +12,25 @@ import hi from "../assets/images/Hi.png";
 
 const Hero = () => {
   return (
-    <div className="flex justify-center items-center flex-col lg:gap-20 h-screen bg-[#f5f5f5]">
-      <div className="flex justify-center items-center flex-col-reverse lg:flex-row gap-0 lg:gap-16">
-        <div className="flex lg:items-start items-center gap-5 lg:gap-10 lg:text-left flex-col w-[450px] text-center text-gray-800">
-          <h1 className="text-6xl text-gray-800 font-bold inline-flex">
-            Front-End
+    <div id="home" className="flex justify-center items-center flex-col h-[100%] lg:h-screen bg-[#f5f5f5] lg:gap-10 py-10 lg:py-0">
+      <div className="container mx-auto flex justify-center items-center flex-col-reverse lg:flex-row gap-4 lg:gap-20">
+        <div className="flex lg:items-start items-center gap-2 lg:text-left flex-col w-[400px] lg:w-[500px] text-center text-gray-800">
+          <h1 className=" text-4xl lg:text-6xl text-gray-800 font-bold inline-flex">
+            Front-End React
             <br />
-            Developer{" "}
+            Developer
             <span>
               <img
                 src={hi}
                 alt="hi"
-                className="wave lg:block hidden  h-40 w-40"
+                className="wave lg:block hidden  h-[100%] w-[100%]"
               />
             </span>
             <span>
-              <img src={hi} alt="hi" className="lg:hidden h-40 w-40" />
+              <img src={hi} alt="hi" className="lg:hidden h-20 w-20" />
             </span>
           </h1>
-          <p className="text-lg font-normal">
+          <p className=" text-lg lg:text-xl font-normal">
             Hi, <b className="text-blue-600">I'm Ibukun Agotola.</b> An enthusiat self-taught Front-end
             React Developer based in Lagos, Nigeria.
           </p>
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="image_frame">
-          <img src={ibukun} alt="ibukun" className="ibukun" />
+          {/* <img src={ibukun} alt="ibukun" className="ibukun" /> */}
         </div>
       </div>
 

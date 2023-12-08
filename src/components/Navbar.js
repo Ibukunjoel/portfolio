@@ -5,14 +5,14 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-start shadow-md sticky top-0 bg-white z-50">
-      <a href="/" className="text-xl font-bold text-blue-700 py-3 px-10 hover:bg-[#f5f5f5]">
+      <a href="/#home" className="text-xl font-bold text-blue-700 py-3 px-10 hover:bg-[#f5f5f5]">
         Ibukun.dev
       </a>
 
       {/* Desktop menu  */}
       <div className="lg:flex hidden bg-blue-600">
         <a
-          href="/"
+          href="/#home"
           className="text-lg text-white font-medium hover:bg-blue-700 active:[#ff4500] focus:outline-none focus:ring focus:ring-blue-900 py-3 px-10"
         >
           Home
@@ -24,7 +24,7 @@ const Navbar = () => {
           About
         </a>
         <a
-          href="/#project"
+          href="/#projects"
           className="text-lg text-white font-medium hover:bg-blue-700 active:[#ff4500] focus:outline-none focus:ring focus:ring-blue-900 py-3 px-10"
         >
           Project
