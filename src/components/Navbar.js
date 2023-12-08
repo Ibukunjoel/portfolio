@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Link from "react-dom"
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -8,7 +8,7 @@ const Navbar = () => {
       <a href="/#home" className="text-xl font-bold text-blue-700 py-3 px-10 hover:bg-[#f5f5f5]">
         Ibukun.dev
       </a>
-
+      <Link ></Link>
       {/* Desktop menu  */}
       <div className="lg:flex hidden bg-blue-600">
         <a
@@ -65,7 +65,7 @@ const Navbar = () => {
               About
             </a>
             <a
-              href="/#project"
+              href="/#projects"
               className="flex justify-center items-center text-xl hover:bg-blue-700 active:[#ff4500] focus:outline-none focus:ring focus:ring-blue-900 w-full h-14"
               onClick={() => setToggleMenu(false)}
             >
